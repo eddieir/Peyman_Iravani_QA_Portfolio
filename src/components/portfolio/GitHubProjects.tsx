@@ -19,7 +19,7 @@ const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'code abstract',
     githubUrl: 'https://github.com/eddieir',
-    liveUrl: '#', 
+    liveUrl: '#',
   },
   {
     title: 'API Test Suite',
@@ -55,7 +55,7 @@ export default function GitHubProjects() {
                 alt={project.title}
                 width={600}
                 height={400}
-                className="object-cover aspect-video w-full"
+                className={project.title === 'Falcon Automation Framework' ? "object-contain aspect-video w-full" : "object-cover aspect-video w-full"}
                 data-ai-hint={project.imageHint}
               />
               <CardHeader>
