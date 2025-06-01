@@ -25,12 +25,12 @@ import {
   GitBranch,
   Cloud,
   Box,
-  Ship, // Icon for Kubernetes
-  Globe2, // Icon for BrowserStack
-  DatabaseZap, // Specific for MongoDB or can use Database
-  ServerCog, // For SQL Server / Management Studio
-  ListChecks, // For Jira
-  TerminalSquare // For IDEs
+  Ship,
+  Globe2,
+  DatabaseZap,
+  ServerCog,
+  ListChecks,
+  TerminalSquare
 } from 'lucide-react';
 
 const technologies = [
@@ -43,30 +43,33 @@ const technologies = [
   { name: 'C++', icon: <Code className="h-5 w-5" />, category: "Programming Languages" },
 
   // Web Technologies
+  { name: 'ReactJS', icon: <Component className="h-5 w-5" />, category: "Web Technologies" },
   { name: 'AngularJS', icon: <Component className="h-5 w-5" />, category: "Web Technologies" },
   { name: 'HTML5', icon: <FileCode className="h-5 w-5" />, category: "Web Technologies" },
   { name: 'SASS', icon: <Palette className="h-5 w-5" />, category: "Web Technologies" },
 
-  // Test Automation & Frameworks
+  // Test Automation
   { name: 'Selenium', icon: <MousePointerSquareDashed className="h-5 w-5" />, category: "Test Automation" },
   { name: 'Appium', icon: <Smartphone className="h-5 w-5" />, category: "Test Automation" },
   { name: 'Playwright', icon: <Puzzle className="h-5 w-5" />, category: "Test Automation" },
   { name: 'Robot Framework', icon: <Bot className="h-5 w-5" />, category: "Test Automation" },
   { name: 'Cypress', icon: <CheckCircle className="h-5 w-5" />, category: "Test Automation" },
   { name: 'JUnit', icon: <TestTube2 className="h-5 w-5" />, category: "Test Automation" },
+  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "Test Automation" },
+  { name: 'Newman', icon: <Terminal className="h-5 w-5" />, category: "Test Automation" },
+  
+  // Test Frameworks
   { name: 'MCP', icon: <Settings2 className="h-5 w-5" />, category: "Test Frameworks" },
   { name: 'Playwright-MCP', icon: <Combine className="h-5 w-5" />, category: "Test Frameworks" },
   
-  // API & Performance Testing
-  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "API & Performance Testing" },
-  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "API & Performance Testing" },
-  { name: 'Newman', icon: <Terminal className="h-5 w-5" />, category: "API & Performance Testing" },
-  { name: 'JMeter', icon: <Gauge className="h-5 w-5" />, category: "API & Performance Testing" },
+  // Performance Testing
+  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "Performance Testing" },
+  { name: 'JMeter', icon: <Gauge className="h-5 w-5" />, category: "Performance Testing" },
 
   // AI in Testing
   { name: 'AI in Testing', icon: <Brain className="h-5 w-5" />, category: "AI in Testing" },
 
-  // DevOps, CI/CD
+  // DevOps & CI/CD
   { name: 'Azure DevOps (ADO)', icon: <CloudCog className="h-5 w-5" />, category: "DevOps & CI/CD" },
   { name: 'GitLab', icon: <GitBranch className="h-5 w-5" />, category: "DevOps & CI/CD" },
   { name: 'Docker', icon: <Box className="h-5 w-5" />, category: "DevOps & CI/CD" },
@@ -83,6 +86,8 @@ const technologies = [
 
   // Development & PM Tools
   { name: 'Jira', icon: <ListChecks className="h-5 w-5" />, category: "Development & PM Tools" },
+  
+  // IDEs
   { name: 'Visual Studio', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs" },
   { name: 'Visual Studio Code', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs" },
   { name: 'IntelliJ', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs" },
