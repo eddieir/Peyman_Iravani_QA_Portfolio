@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { useToast } from "@/hooks/use-toast";
 import { Linkedin, Mail, ClipboardCopy } from 'lucide-react';
 
-const PEYMAN_EMAIL = "peyman.iravani@example.com"; // Replace with actual email
-const LINKEDIN_URL = "https://www.linkedin.com/in/peymaniravani/"; // Replace with actual LinkedIn URL
+const PEYMAN_EMAIL = "peyman.iravani@gmail.com";
+const LINKEDIN_URL = "https://www.linkedin.com/in/peyman-iravani-3914504b/";
 
 export default function ContactSection() {
   const { toast } = useToast();
