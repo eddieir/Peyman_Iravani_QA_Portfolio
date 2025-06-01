@@ -20,7 +20,7 @@ export default function AboutMe() {
           <Card className="overflow-hidden rounded-xl shadow-lg">
             <CardContent className="p-0">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://avatars.githubusercontent.com/u/23243761?v=4"
                 alt="Peyman Iravani"
                 width={600}
                 height={400}
