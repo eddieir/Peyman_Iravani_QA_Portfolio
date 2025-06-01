@@ -1,5 +1,5 @@
+
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
 
 export default function AboutMe() {
   return (
@@ -17,18 +17,19 @@ export default function AboutMe() {
               I thrive in dynamic environments, continuously learning and adapting to new challenges in the ever-evolving tech landscape. My goal is to contribute to building exceptional digital experiences through meticulous testing and automation.
             </p>
           </div>
-          <Card className="overflow-hidden rounded-xl shadow-lg">
-            <CardContent className="p-0">
+          <div className="flex justify-center items-center">
+            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl">
               <Image
                 src="https://avatars.githubusercontent.com/u/23243761?v=4"
                 alt="Peyman Iravani"
-                width={600}
-                height={400}
-                className="object-contain aspect-[3/2]"
+                width={256}
+                height={256}
+                className="object-cover w-full h-full"
                 data-ai-hint="professional portrait"
+                priority
               />
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
