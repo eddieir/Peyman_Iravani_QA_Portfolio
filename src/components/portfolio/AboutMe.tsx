@@ -24,7 +24,7 @@ export default function AboutMe() {
                 alt="Peyman Iravani"
                 width={600}
                 height={400}
-                className="object-cover aspect-[3/2]"
+                className="object-contain aspect-[3/2]"
                 data-ai-hint="professional portrait"
               />
             </CardContent>
