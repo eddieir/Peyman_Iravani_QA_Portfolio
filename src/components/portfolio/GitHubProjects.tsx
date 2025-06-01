@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -5,26 +6,34 @@ import { Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: 'Falcon Automation Framework',
+    description: 'A robust test automation framework built with Selenium, TestNG, Java, and Maven for comprehensive end-to-end testing of web applications. Features Page Object Model, data-driven testing, and detailed reporting capabilities.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'automation framework',
+    githubUrl: 'https://github.com/eddieir/Falcon-Automation',
+    liveUrl: null,
+  },
+  {
     title: 'QA Automation Framework',
     description: 'A comprehensive test automation framework built with Playwright and Python for E2E testing of web applications.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'code abstract',
-    githubUrl: 'https://github.com/peymaniravani', // Replace with actual project URL
-    liveUrl: '#', // Replace with actual live URL or remove
+    githubUrl: 'https://github.com/eddieir',
+    liveUrl: '#', 
   },
   {
     title: 'API Test Suite',
     description: 'Automated API tests using Node.js and Jest, focusing on RESTful services and ensuring data integrity.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'network server',
-    githubUrl: 'https://github.com/peymaniravani', // Replace with actual project URL
+    githubUrl: 'https://github.com/eddieir',
   },
   {
     title: 'Performance Test Scripts',
     description: 'Developed JMeter scripts for load and stress testing critical application components.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'graph chart',
-    githubUrl: 'https://github.com/peymaniravani', // Replace with actual project URL
+    githubUrl: 'https://github.com/eddieir',
   },
 ];
 
