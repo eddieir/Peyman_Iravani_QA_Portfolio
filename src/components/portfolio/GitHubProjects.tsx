@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Falcon Automation Framework',
     description: 'A robust test automation framework built with Selenium, TestNG, Java, and Maven for comprehensive end-to-end testing of web applications. Features Page Object Model, data-driven testing, and detailed reporting capabilities.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://media.licdn.com/dms/image/v2/D4D2DAQEx8oIZ-QG_Ng/profile-treasury-image-shrink_800_800/B4DZZel8waHwAc-/0/1745343731237?e=1749394800&v=beta&t=nMpnejtojkUb9g0YhJaS2aNCmYFpgQHmncZXLO2cxEA',
     imageHint: 'automation framework',
     githubUrl: 'https://github.com/eddieir/Falcon-Automation',
     liveUrl: null,
