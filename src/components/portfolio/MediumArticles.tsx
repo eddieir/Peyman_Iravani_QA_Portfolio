@@ -41,8 +41,7 @@ export default async function MediumArticles() {
         return { ...article, generatedImageUrl: imageDataUri };
       } catch (error) {
         console.error(`Failed to generate image for article "${article.title}":`, error);
-        // Fallback to a placeholder if generation fails
-        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=Error+loading+image` };
+        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=Image+Gen+Error` };
       }
     })
   );
@@ -59,13 +58,15 @@ export default async function MediumArticles() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {articlesWithImages.map((article) => (
             <Card key={article.title} className="overflow-hidden hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl flex flex-col">
-              <Image
-                src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+not+available`}
-                alt={article.title}
-                width={200}
-                height={100}
-                className="object-cover aspect-[2/1] w-full"
-              />
+              <div className="w-full aspect-[2/1] relative overflow-hidden">
+                <Image
+                  src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+Not+Available`}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw" 
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="font-headline">{article.title}</CardTitle>
                 <CardDescription>{article.description}</CardDescription>
