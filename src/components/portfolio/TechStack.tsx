@@ -135,7 +135,7 @@ export default function TechStack() {
           return (
             <div key={category} className="my-10">
               <h3 className="text-2xl font-semibold tracking-tight mb-6 text-center font-headline">{category}</h3>
-              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 justify-items-center">
+              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
                 {categorySkills.map((tech) => (
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
