@@ -1,6 +1,4 @@
 
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Tooltip,
   TooltipContent,
@@ -45,7 +43,7 @@ const technologies = [
   { name: 'Python', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in Python for scripting, automation, and backend development." },
   { name: 'C#', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Experienced in C# for developing .NET applications and automation solutions." },
   { name: 'Node.js', icon: <Binary className="h-5 w-5" />, category: "Programming Languages", detail: "Skilled in Node.js for building scalable backend services and APIs." },
-  { name: 'TypeScript', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in TypeScript for building robust and scalable web applications, enhancing JavaScript with static typing." },
+  { name: 'TypeScript', icon: <FileCode className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in TypeScript for building robust and scalable web applications, enhancing JavaScript with static typing." },
   { name: 'SQL', icon: <Database className="h-5 w-5" />, category: "Programming Languages", detail: "Strong understanding of SQL for database querying and management." },
   { name: 'C', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Foundational knowledge in C programming." },
   { name: 'C++', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Familiar with C++ for system-level programming and performance-critical applications." },
@@ -127,24 +125,20 @@ export default function TechStack() {
           return (
             <div key={category} className="my-10">
               <h3 className="text-2xl font-semibold tracking-tight mb-6 text-center font-headline">{category}</h3>
-              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
+              <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 md:gap-x-8">
                 {categorySkills.map((tech) => (
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Card className="flex flex-col items-center justify-center p-3 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl w-32 h-32 md:w-36 md:h-36">
-                          <div className="mb-2 rounded-full bg-accent/10 p-2.5 text-accent">
-                            {tech.icon}
-                          </div>
-                          <CardHeader className="p-0 text-center">
-                            <CardTitle className="text-sm font-semibold font-headline leading-tight">
-                              {tech.name.replace(/\s\(.*\)/, '')} 
-                            </CardTitle>
-                          </CardHeader>
-                        </Card>
+                        <div className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-secondary/40 hover:shadow-sm transition-all duration-200 cursor-default border border-transparent hover:border-accent/30">
+                          <span className="text-accent flex-shrink-0">{tech.icon}</span>
+                          <span className="text-sm font-medium text-foreground">
+                            {tech.name.replace(/\s\(.*\)/, '')} 
+                          </span>
+                        </div>
                       </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{tech.detail}</p>
+                      <TooltipContent className="max-w-xs bg-popover text-popover-foreground border-border shadow-xl rounded-md">
+                        <p className="text-sm">{tech.detail}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
