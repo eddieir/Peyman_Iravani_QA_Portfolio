@@ -3,46 +3,50 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpenText } from 'lucide-react';
+import { generateArticleImage } from '@/ai/flows/generate-article-image-flow';
 
-const articles = [
+const articlesData = [
   {
     title: 'Understanding MCP Server Architecture for QA Automation',
     description: 'An in-depth look at MCP Server architecture and its implications for QA automation strategies.',
-    imageUrl: 'https://placehold.co/200x100.png',
-    imageHint: 'server architecture',
     articleUrl: 'https://medium.com/@peyman.iravani/understanding-mcp-server-architecture-for-qa-automation-a89e426de099',
   },
   {
     title: 'Playwright JavaScript Fundamentals for Professional QA Engineers',
     description: 'Essential JavaScript concepts for QA professionals using Playwright for test automation.',
-    imageUrl: 'https://placehold.co/200x100.png',
-    imageHint: 'Playwright JavaScript',
     articleUrl: 'https://medium.com/@peyman.iravani/playwright-javascript-fundamentals-for-professional-qa-engineers-0e6fc967b9ab',
   },
   {
     title: 'Setting Up MCP Server with Playwright: A Complete Integration Guide',
     description: 'A step-by-step guide to integrating MCP Server with Playwright for enhanced test automation.',
-    imageUrl: 'https://placehold.co/200x100.png',
-    imageHint: 'integration guide',
     articleUrl: 'https://medium.com/@peyman.iravani/setting-up-mcp-server-with-playwright-a-complete-integration-guide-bbd40dd008cf',
   },
   {
     title: 'Test Data Management in MCP-Playwright Architecture',
     description: 'Strategies and best practices for managing test data within an MCP and Playwright framework.',
-    imageUrl: 'https://placehold.co/200x100.png',
-    imageHint: 'data management',
     articleUrl: 'https://medium.com/@peyman.iravani/test-data-management-in-mcp-playwright-architecture-69c31e791cf8',
   },
   {
     title: 'Building Intelligent Test Selectors with MCP Server Logic',
     description: 'Leveraging MCP Server logic to create robust and intelligent test selectors for automation.',
-    imageUrl: 'https://placehold.co/200x100.png',
-    imageHint: 'intelligent selectors',
     articleUrl: 'https://medium.com/@peyman.iravani/building-intelligent-test-selectors-with-mcp-server-logic-d5fb8c26730e',
   },
 ];
 
-export default function MediumArticles() {
+export default async function MediumArticles() {
+  const articlesWithImages = await Promise.all(
+    articlesData.map(async (article) => {
+      try {
+        const { imageDataUri } = await generateArticleImage({ title: article.title });
+        return { ...article, generatedImageUrl: imageDataUri };
+      } catch (error) {
+        console.error(`Failed to generate image for article "${article.title}":`, error);
+        // Fallback to a placeholder if generation fails
+        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=Error+loading+image` };
+      }
+    })
+  );
+
   return (
     <section id="articles" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -53,15 +57,14 @@ export default function MediumArticles() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {articles.map((article) => (
+          {articlesWithImages.map((article) => (
             <Card key={article.title} className="overflow-hidden hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl flex flex-col">
               <Image
-                src={article.imageUrl}
+                src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+not+available`}
                 alt={article.title}
                 width={200}
                 height={100}
                 className="object-cover aspect-[2/1] w-full"
-                data-ai-hint={article.imageHint}
               />
               <CardHeader>
                 <CardTitle className="font-headline">{article.title}</CardTitle>
