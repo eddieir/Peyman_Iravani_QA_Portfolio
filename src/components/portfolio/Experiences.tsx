@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 import { Briefcase } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -8,6 +9,9 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "MSC technology",
     location: "Turin, Italy",
+    logoUrl: "https://placehold.co/100x40.png",
+    logoAlt: "MSC technology Logo",
+    imageHint: "msc technology",
     responsibilities: [
       "Leading and managing all aspects of automation solutions within the team, ensuring robust and scalable implementations.",
       "Designing and developing automation frameworks using Playwright and C# for comprehensive testing.",
@@ -24,6 +28,9 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "Oval Money",
     location: "Turin, Italy",
+    logoUrl: "https://placehold.co/100x40.png",
+    logoAlt: "Oval Money Logo",
+    imageHint: "oval money",
     responsibilities: [
       "Designed and developed automation frameworks from scratch using Python, Selenium for web, and Appium for mobile testing.",
       "Automated API testing with Postman and implemented performance testing frameworks using Locust, ensuring system reliability and scalability.",
@@ -38,6 +45,9 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "TIM",
     location: "Milan, Italy",
+    logoUrl: "https://placehold.co/100x40.png",
+    logoAlt: "TIM Logo",
+    imageHint: "tim",
     responsibilities: [
       "Automated tests for both mobile and web applications using Python, Selenium, Appium, and Robot Framework, ensuring comprehensive test coverage.",
       "Designed and implemented robust automation scripts for functional, regression, and end-to-end testing.",
@@ -51,6 +61,9 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "Nokia",
     location: "Milan, Italy",
+    logoUrl: "https://placehold.co/100x40.png",
+    logoAlt: "Nokia Logo",
+    imageHint: "nokia",
     responsibilities: [
       "Automated testing processes using Python, Selenium, and Appium to ensure the quality of mobile and web applications.",
       "Controlled and evaluated APIs and pipelines for server quality, identifying and addressing discrepancies effectively.",
@@ -64,6 +77,9 @@ const experiencesData = [
     role: "Software engineer & QA engineer",
     company: "Wind3",
     location: "Milan, Italy",
+    logoUrl: "https://placehold.co/100x40.png",
+    logoAlt: "Wind3 Logo",
+    imageHint: "wind3",
     responsibilities: [
       "Developed and maintained eCommerce websites using AngularJS, HTML5, and SASS, ensuring responsive and user-friendly designs.",
       "Designed and implemented test automation frameworks for web, Android, and iOS platforms using Python, Selenium, and Appium.",
@@ -92,12 +108,22 @@ export default function Experiences() {
         </div>
         <div className="space-y-8">
           {experiencesData.map((exp, index) => (
-            <Card key={index} className="shadow-lg rounded-xl">
-              <CardHeader>
-                <CardTitle className="font-headline text-xl md:text-2xl">{exp.role} at {exp.company}</CardTitle>
-                <CardDescription className="text-sm md:text-base">{exp.dateRange} | {exp.location}</CardDescription>
+            <Card key={index} className="shadow-lg rounded-xl overflow-hidden">
+              <CardHeader className="flex flex-col sm:flex-row items-start gap-4 p-6 bg-card">
+                <Image
+                  src={exp.logoUrl}
+                  alt={exp.logoAlt}
+                  width={80}
+                  height={80}
+                  className="rounded-sm object-contain h-14 w-auto mt-1"
+                  data-ai-hint={exp.imageHint}
+                />
+                <div className="flex-grow">
+                  <CardTitle className="font-headline text-xl md:text-2xl">{exp.role} at {exp.company}</CardTitle>
+                  <CardDescription className="text-sm md:text-base mt-1">{exp.dateRange} | {exp.location}</CardDescription>
+                </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-6">
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                   {exp.responsibilities.map((resp, i) => (
                     <li key={i}>{resp}</li>
