@@ -4,7 +4,6 @@ import TechStack from '@/components/portfolio/TechStack';
 import GitHubProjects from '@/components/portfolio/GitHubProjects';
 import MediumArticles from '@/components/portfolio/MediumArticles';
 import Experiences from '@/components/portfolio/Experiences';
-import ArticleSummarizerSection from '@/components/portfolio/ArticleSummarizerSection';
 import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
 
@@ -18,7 +17,6 @@ export default function PortfolioPage() {
         <GitHubProjects />
         <MediumArticles />
         <Experiences />
-        <ArticleSummarizerSection />
         <ContactSection />
       </main>
       <Footer />

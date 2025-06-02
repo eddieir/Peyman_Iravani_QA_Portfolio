@@ -1,4 +1,4 @@
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/summarize-article.ts';
+// Removed import for summarize-article.ts as the feature is no longer used.
