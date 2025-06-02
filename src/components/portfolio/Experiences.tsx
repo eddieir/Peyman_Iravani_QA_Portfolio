@@ -45,7 +45,7 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "TIM",
     location: "Milan, Italy",
-    logoUrl: "https://placehold.co/100x40.png",
+    logoUrl: "https://media.licdn.com/dms/image/v2/D4D0BAQFC13FHQP4Iaw/company-logo_100_100/B4DZcqUtN3HwAQ-/0/1748761761066/tim_logo?e=1754524800&v=beta&t=khgkVL13DuMZ5LnoqHfnl490vXRbSNyNXKuur3BCb24",
     logoAlt: "TIM Logo",
     imageHint: "tim",
     responsibilities: [
@@ -61,7 +61,7 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "Nokia",
     location: "Milan, Italy",
-    logoUrl: "https://placehold.co/100x40.png",
+    logoUrl: "https://media.licdn.com/dms/image/v2/C4E0BAQGL8hpduEqGKQ/company-logo_100_100/company-logo_100_100/0/1677420439270/nokia_logo?e=1754524800&v=beta&t=dW85Pi4Yi-TKF3QZQVrbwf2dymDXx5Ki5j-AOKVCNcY",
     logoAlt: "Nokia Logo",
     imageHint: "nokia",
     responsibilities: [
