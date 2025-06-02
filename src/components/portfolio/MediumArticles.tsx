@@ -10,6 +10,8 @@ const articlesData = [
     title: 'Understanding MCP Server Architecture for QA Automation',
     description: 'An in-depth look at MCP Server architecture and its implications for QA automation strategies.',
     articleUrl: 'https://medium.com/@peyman.iravani/understanding-mcp-server-architecture-for-qa-automation-a89e426de099',
+    // Replace this with the actual base64 data URI of your image
+    staticImageUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABkCAYAAABfS28KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASUVORK5CYII=', // Placeholder for the user-provided image
   },
   {
     title: 'Playwright JavaScript Fundamentals for Professional QA Engineers',
@@ -33,15 +35,27 @@ const articlesData = [
   },
 ];
 
+interface Article {
+  title: string;
+  description: string;
+  articleUrl: string;
+  staticImageUrl?: string;
+  generatedImageUrl?: string;
+}
+
 export default async function MediumArticles() {
   const articlesWithImages = await Promise.all(
-    articlesData.map(async (article) => {
+    articlesData.map(async (article: Article) => {
+      if (article.staticImageUrl) {
+        return { ...article, generatedImageUrl: article.staticImageUrl };
+      }
       try {
         const { imageDataUri } = await generateArticleImage({ title: article.title });
         return { ...article, generatedImageUrl: imageDataUri };
       } catch (error) {
         console.error(`Failed to generate image for article "${article.title}":`, error);
-        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=Image+Gen+Error` };
+        // Using a more specific placeholder to indicate actual image generation failed
+        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=AI+Gen+Error` };
       }
     })
   );
@@ -60,11 +74,11 @@ export default async function MediumArticles() {
             <Card key={article.title} className="overflow-hidden hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl flex flex-col">
               <div className="w-full aspect-[2/1] relative overflow-hidden">
                 <Image
-                  src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+Not+Available`}
+                  src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+Missing`}
                   alt={article.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw" 
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <CardHeader>
