@@ -14,7 +14,7 @@ const experiencesData = [
     imageHint: "msc technology",
     responsibilities: [
       "Leading and managing all aspects of automation solutions within the team, ensuring robust and scalable implementations.",
-      "Designing and developing automation frameworks using Playwright and C# for comprehensive testing.",
+      "Designing and developing automation frameworks using Playwright and C# for comprehensive testing, resulting in a fully functional automation solution covering over 1000 test cases with a failure rate below 10%.",
       "Automating API testing using Postman and Newman, ensuring reliability and accuracy across endpoints.",
       "Building and maintaining JUnit frameworks for efficient test execution and reporting.",
       "Creating and executing release and building pipelines in Azure DevOps (ADO) to support CI/CD workflows.",
