@@ -10,8 +10,7 @@ const articlesData = [
     title: 'Understanding MCP Server Architecture for QA Automation',
     description: 'An in-depth look at MCP Server architecture and its implications for QA automation strategies.',
     articleUrl: 'https://medium.com/@peyman.iravani/understanding-mcp-server-architecture-for-qa-automation-a89e426de099',
-    // Replace this with the actual base64 data URI of your image
-    staticImageUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABkCAYAAABfS28KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASUVORK5CYII=', // Placeholder for the user-provided image
+    // staticImageUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABkCAYAAABfS28KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASUVORK5CYII=', // Placeholder removed
   },
   {
     title: 'Playwright JavaScript Fundamentals for Professional QA Engineers',
