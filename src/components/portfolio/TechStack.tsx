@@ -11,7 +11,6 @@ import {
   Component,
   FileCode,
   Palette,
-  Binary,
   MousePointerSquareDashed,
   Smartphone,
   Puzzle,
@@ -42,7 +41,7 @@ const technologies = [
   // Programming Languages
   { name: 'Python', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in Python for scripting, automation, and backend development." },
   { name: 'C#', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Experienced in C# for developing .NET applications and automation solutions." },
-  { name: 'Node.js', icon: <Binary className="h-5 w-5" />, category: "Programming Languages", detail: "Skilled in Node.js for building scalable backend services and APIs." },
+  { name: 'Node.js', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Skilled in Node.js for building scalable backend services and APIs." },
   { name: 'TypeScript', icon: <FileCode className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in TypeScript for building robust and scalable web applications, enhancing JavaScript with static typing." },
   { name: 'SQL', icon: <Database className="h-5 w-5" />, category: "Programming Languages", detail: "Strong understanding of SQL for database querying and management." },
   { name: 'C', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Foundational knowledge in C programming." },
@@ -113,7 +112,8 @@ export default function TechStack() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Tech Stack</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A glimpse into the tools and technologies I leverage to build and ensure quality software. Hover over a skill for more details.
+              A glimpse into the tools and technologies I leverage to build and ensure quality software. Hover over a skill for more details. 
+              (Note: Icons are from the Lucide icon set; specific brand logos would require custom SVGs.)
             </p>
           </div>
         </div>
