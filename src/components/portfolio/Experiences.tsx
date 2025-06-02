@@ -1,5 +1,79 @@
 
 import { Briefcase } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const experiencesData = [
+  {
+    dateRange: "MAY 2023 – PRESENT",
+    role: "QA Automation Engineer",
+    company: "MSC technology",
+    location: "Turin, Italy",
+    responsibilities: [
+      "Leading and managing all aspects of automation solutions within the team, ensuring robust and scalable implementations.",
+      "Designing and developing automation frameworks using Playwright and C# for comprehensive testing.",
+      "Automating API testing using Postman and Newman, ensuring reliability and accuracy across endpoints.",
+      "Building and maintaining JUnit frameworks for efficient test execution and reporting.",
+      "Creating and executing release and building pipelines in Azure DevOps (ADO) to support CI/CD workflows.",
+      "Mentoring new team members, conducted knowledge-sharing sessions, and onboarded newcomers to automation practices.",
+      "Integrating new features into automation solutions and ensuring team-wide understanding and adoption through effective communication.",
+      "Collaborating with cross-functional teams in an agile environment to uphold quality standards throughout the software development lifecycle."
+    ]
+  },
+  {
+    dateRange: "OCTOBER 2022 – MAY 2023",
+    role: "QA Automation Engineer",
+    company: "Oval Money",
+    location: "Turin, Italy",
+    responsibilities: [
+      "Designed and developed automation frameworks from scratch using Python, Selenium for web, and Appium for mobile testing.",
+      "Automated API testing with Postman and implemented performance testing frameworks using Locust, ensuring system reliability and scalability.",
+      "Created and maintained an automated CI/CD pipeline in GitLab, integrating test automation seamlessly into the development lifecycle and utilized AWS and BrowserStack for cloud-based testing and cross-platform compatibility validation.",
+      "Introduced best practices in automation testing, reducing manual testing efforts and improving testing efficiency.",
+      "Mentored team members conducted knowledge-sharing sessions, and facilitated the integration of new features into the automation framework.",
+      "Collaborated with cross-functional teams in an agile environment to deliver high-quality software solutions."
+    ]
+  },
+  {
+    dateRange: "JANUARY 2021 – SEPTEMBER 2022",
+    role: "QA Automation Engineer",
+    company: "TIM",
+    location: "Milan, Italy",
+    responsibilities: [
+      "Automated tests for both mobile and web applications using Python, Selenium, Appium, and Robot Framework, ensuring comprehensive test coverage.",
+      "Designed and implemented robust automation scripts for functional, regression, and end-to-end testing.",
+      "Enhanced test efficiency by integrating manual test cases into the automation framework.",
+      "Collaborated closely with cross-functional teams to deliver high-quality software solutions throughout the development lifecycle.",
+      "Participated in agile ceremonies, including daily stand-ups, sprint planning, and retrospectives, to ensure alignment and continuous improvement."
+    ]
+  },
+  {
+    dateRange: "MAY 2020 – DECEMBER 2020",
+    role: "QA Automation Engineer",
+    company: "Nokia",
+    location: "Milan, Italy",
+    responsibilities: [
+      "Automated testing processes using Python, Selenium, and Appium to ensure the quality of mobile and web applications.",
+      "Controlled and evaluated APIs and pipelines for server quality, identifying and addressing discrepancies effectively.",
+      "Designed and maintained automation scripts to bridge gaps between ideal designs and existing implementations.",
+      "Ensured seamless integration of automated tests into the development lifecycle, contributing to enhanced system reliability.",
+      "Collaborated with development and testing teams to deliver high-quality solutions in an agile environment."
+    ]
+  },
+  {
+    dateRange: "JUNE 2019 – MAY 2020",
+    role: "Software engineer & QA engineer",
+    company: "Wind3",
+    location: "Milan, Italy",
+    responsibilities: [
+      "Developed and maintained eCommerce websites using AngularJS, HTML5, and SASS, ensuring responsive and user-friendly designs.",
+      "Designed and implemented test automation frameworks for web, Android, and iOS platforms using Python, Selenium, and Appium.",
+      "Collaborated with the development team to identify and resolve bugs, ensuring the delivery of high-quality applications.",
+      "Standardized testing and development workflows, enhancing efficiency and consistency across projects.",
+      "Performed cross-platform compatibility testing to ensure functionality on multiple devices and browsers.",
+      "Actively participated in agile processes, including sprint planning, stand-ups, and retrospectives, to drive continuous improvement."
+    ]
+  }
+];
 
 export default function Experiences() {
   return (
@@ -13,13 +87,25 @@ export default function Experiences() {
             My Professional Journey
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Details about my professional roles, responsibilities, and accomplishments will be showcased here.
-            Stay tuned for updates on my work experience!
+            A detailed look at my roles, responsibilities, and accomplishments throughout my career.
           </p>
         </div>
-        {/* Placeholder for experience cards or timeline */}
-        <div className="text-center text-muted-foreground">
-          <p>(Experience details coming soon)</p>
+        <div className="space-y-8">
+          {experiencesData.map((exp, index) => (
+            <Card key={index} className="shadow-lg rounded-xl">
+              <CardHeader>
+                <CardTitle className="font-headline text-xl md:text-2xl">{exp.role} at {exp.company}</CardTitle>
+                <CardDescription className="text-sm md:text-base">{exp.dateRange} | {exp.location}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  {exp.responsibilities.map((resp, i) => (
+                    <li key={i}>{resp}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
