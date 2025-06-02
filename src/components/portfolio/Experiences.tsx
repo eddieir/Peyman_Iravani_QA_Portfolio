@@ -18,6 +18,7 @@ const experiencesData = [
       "Automating API testing using Postman and Newman, ensuring reliability and accuracy across endpoints.",
       "Building and maintaining JUnit frameworks for efficient test execution and reporting.",
       "Creating and executing release and building pipelines in Azure DevOps (ADO) to support CI/CD workflows.",
+      "Designed and implemented JMeter API load and performance tests, achieving comprehensive coverage for the majority of internal company APIs.",
       "Mentoring new team members, conducted knowledge-sharing sessions, and onboarded newcomers to automation practices.",
       "Integrating new features into automation solutions and ensuring team-wide understanding and adoption through effective communication.",
       "Collaborating with cross-functional teams in an agile environment to uphold quality standards throughout the software development lifecycle."
