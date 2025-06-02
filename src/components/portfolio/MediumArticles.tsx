@@ -8,36 +8,36 @@ const articles = [
   {
     title: 'Understanding MCP Server Architecture for QA Automation',
     description: 'An in-depth look at MCP Server architecture and its implications for QA automation strategies.',
-    imageUrl: 'https://placehold.co/400x200.png',
+    imageUrl: 'https://placehold.co/200x100.png',
     imageHint: 'server architecture',
     articleUrl: 'https://medium.com/@peyman.iravani/understanding-mcp-server-architecture-for-qa-automation-a89e426de099',
   },
   {
     title: 'Playwright JavaScript Fundamentals for Professional QA Engineers',
     description: 'Essential JavaScript concepts for QA professionals using Playwright for test automation.',
-    imageUrl: 'https://placehold.co/400x200.png',
-    imageHint: 'javascript code',
+    imageUrl: 'https://placehold.co/200x100.png',
+    imageHint: 'Playwright JavaScript',
     articleUrl: 'https://medium.com/@peyman.iravani/playwright-javascript-fundamentals-for-professional-qa-engineers-0e6fc967b9ab',
   },
   {
     title: 'Setting Up MCP Server with Playwright: A Complete Integration Guide',
     description: 'A step-by-step guide to integrating MCP Server with Playwright for enhanced test automation.',
-    imageUrl: 'https://placehold.co/400x200.png',
+    imageUrl: 'https://placehold.co/200x100.png',
     imageHint: 'integration guide',
     articleUrl: 'https://medium.com/@peyman.iravani/setting-up-mcp-server-with-playwright-a-complete-integration-guide-bbd40dd008cf',
   },
   {
     title: 'Test Data Management in MCP-Playwright Architecture',
     description: 'Strategies and best practices for managing test data within an MCP and Playwright framework.',
-    imageUrl: 'https://placehold.co/400x200.png',
+    imageUrl: 'https://placehold.co/200x100.png',
     imageHint: 'data management',
     articleUrl: 'https://medium.com/@peyman.iravani/test-data-management-in-mcp-playwright-architecture-69c31e791cf8',
   },
   {
     title: 'Building Intelligent Test Selectors with MCP Server Logic',
     description: 'Leveraging MCP Server logic to create robust and intelligent test selectors for automation.',
-    imageUrl: 'https://placehold.co/400x200.png',
-    imageHint: 'intelligent automation',
+    imageUrl: 'https://placehold.co/200x100.png',
+    imageHint: 'intelligent selectors',
     articleUrl: 'https://medium.com/@peyman.iravani/building-intelligent-test-selectors-with-mcp-server-logic-d5fb8c26730e',
   },
 ];
@@ -58,8 +58,8 @@ export default function MediumArticles() {
               <Image
                 src={article.imageUrl}
                 alt={article.title}
-                width={400}
-                height={200}
+                width={200}
+                height={100}
                 className="object-cover aspect-[2/1] w-full"
                 data-ai-hint={article.imageHint}
               />
