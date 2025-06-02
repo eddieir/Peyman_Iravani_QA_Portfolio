@@ -14,7 +14,7 @@ import {
   FileCode,
   Palette,
   Binary,
-  MousePointerSquareDashed, // Corrected from SquareDashedMousePointer
+  MousePointerSquareDashed,
   Smartphone,
   Puzzle,
   Bot,
@@ -29,7 +29,7 @@ import {
   Brain,
   CloudCog,
   GitBranch,
-  Github, // Added Github icon
+  Github,
   Cloud,
   Box,
   Ship,
@@ -68,7 +68,7 @@ const technologies = [
   { name: 'Azure DevOps (ADO)', icon: <CloudCog className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Using Azure DevOps for CI/CD pipelines and project management." },
   { name: 'GitLab', icon: <GitBranch className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Experience with GitLab for version control and CI/CD." },
   { name: 'GitHub', icon: <Github className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Proficient with GitHub for version control, collaboration, and CI/CD via GitHub Actions." },
-  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services." }, // Moved AWS to DevOps
+  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services." }, 
   { name: 'Docker', icon: <Box className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Utilizing Docker for containerization and environment consistency." },
   { name: 'Kubernetes', icon: <Ship className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Hands-on experience with Kubernetes for orchestrating containerized applications." },
 
@@ -84,16 +84,16 @@ const technologies = [
   { name: 'Microsoft SQL Management Studio', icon: <ServerCog className="h-5 w-5" />, category: "Database Management", detail: "Proficient with Microsoft SQL Server and Management Studio." },
 
   // Performance Testing
-  { name: 'Locust (Performance)', icon: <CloudLightning className="h-5 w-5" />, category: "Performance Testing", detail: "Expertise in performance testing using Locust." }, // Renamed to avoid conflict
-  { name: 'Postman (API Load Testing)', icon: <Send className="h-5 w-5" />, category: "Performance Testing", detail: "Utilizing Postman for API load testing." }, // Specific use case for Postman
+  { name: 'Locust (Performance)', icon: <CloudLightning className="h-5 w-5" />, category: "Performance Testing", detail: "Expertise in performance testing using Locust." },
+  { name: 'Postman (API Load Testing)', icon: <Send className="h-5 w-5" />, category: "Performance Testing", detail: "Utilizing Postman for API load testing." },
 
   // Cloud & Virtualization
-  { name: 'AWS (Cloud Services)', icon: <Cloud className="h-5 w-5" />, category: "Cloud & Virtualization", detail: "Working with Amazon Web Services for cloud infrastructure and services." }, // Specific AWS for cloud
+  { name: 'AWS (Cloud Services)', icon: <Cloud className="h-5 w-5" />, category: "Cloud & Virtualization", detail: "Working with Amazon Web Services for cloud infrastructure and services." },
   { name: 'BrowserStack', icon: <Globe2 className="h-5 w-5" />, category: "Cloud & Virtualization", detail: "Using BrowserStack for cross-browser and cross-platform testing." },
 
   // Bug Tracking Tools
   { name: 'Jira', icon: <ListChecks className="h-5 w-5" />, category: "Bug Tracking Tools", detail: "Using Jira for agile project management and bug tracking." },
-  { name: 'Azure DevOps (Boards)', icon: <CloudCog className="h-5 w-5" />, category: "Bug Tracking Tools", detail: "Utilizing Azure DevOps Boards for work item tracking." }, // Specific use case for ADO
+  { name: 'Azure DevOps (Boards)', icon: <CloudCog className="h-5 w-5" />, category: "Bug Tracking Tools", detail: "Utilizing Azure DevOps Boards for work item tracking." },
 
   // IDEs
   { name: 'Visual Studio (2019, 2022)', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Proficient with Visual Studio (2019, 2022) for .NET development." },
@@ -140,12 +140,12 @@ export default function TechStack() {
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Card className="flex flex-col items-center justify-center p-6 hover:shadow-accent/20 hover:shadow-lg transition-shadow duration-300 rounded-xl cursor-default">
-                          <div className="mb-3 rounded-full bg-accent/10 p-3 text-accent">
+                        <Card className="flex flex-col items-center justify-center p-4 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl">
+                          <div className="mb-2 rounded-full bg-accent/10 p-2.5 text-accent">
                             {tech.icon}
                           </div>
-                          <CardHeader className="p-0 mb-1 text-center">
-                            <CardTitle className="text-base font-headline">{tech.name.replace(/\s\(.*\)/, '')}</CardTitle>
+                          <CardHeader className="p-0 text-center">
+                            <CardTitle className="text-sm font-semibold font-headline">{tech.name.replace(/\s\(.*\)/, '')}</CardTitle>
                           </CardHeader>
                         </Card>
                       </TooltipTrigger>
