@@ -54,7 +54,7 @@ export default function MediumArticles() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {articles.map((article) => (
-            <Card key={article.title} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 rounded-xl flex flex-col">
+            <Card key={article.title} className="overflow-hidden hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl flex flex-col">
               <Image
                 src={article.imageUrl}
                 alt={article.title}
