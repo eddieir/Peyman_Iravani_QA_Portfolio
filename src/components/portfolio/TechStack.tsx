@@ -55,8 +55,8 @@ const technologies = [
   { name: 'Playwright', icon: <Puzzle className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Proficient with Playwright for modern end-to-end web testing." },
   { name: 'Robot Framework', icon: <Bot className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Robot Framework for keyword-driven test automation." },
   { name: 'Cypress', icon: <CheckCircle className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Experience with Cypress for fast and reliable web testing." },
-  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Locust for load testing and performance analysis." },
-  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Expertise in Postman for API testing and development." },
+  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Locust for load testing and performance analysis (also listed under Performance Testing)." },
+  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Expertise in Postman for API testing and development (also listed under Performance Testing)." },
   { name: 'Newman', icon: <Terminal className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Newman to run Postman collections from the command line." },
   { name: 'JUnit', icon: <TestTube2 className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Utilizing JUnit for unit testing in Java applications." },
   { name: 'JMeter', icon: <Gauge className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Proficient with JMeter for performance and load testing." },
@@ -68,7 +68,7 @@ const technologies = [
   { name: 'Azure DevOps (ADO)', icon: <CloudCog className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Using Azure DevOps for CI/CD pipelines and project management." },
   { name: 'GitLab', icon: <GitBranch className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Experience with GitLab for version control and CI/CD." },
   { name: 'GitHub', icon: <Github className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Proficient with GitHub for version control, collaboration, and CI/CD via GitHub Actions." },
-  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services." }, 
+  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services (also listed under Cloud & Virtualization)." }, 
   { name: 'Docker', icon: <Box className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Utilizing Docker for containerization and environment consistency." },
   { name: 'Kubernetes', icon: <Ship className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Hands-on experience with Kubernetes for orchestrating containerized applications." },
 
@@ -134,8 +134,8 @@ export default function TechStack() {
 
           return (
             <div key={category} className="my-10">
-              <h3 className="text-2xl font-semibold tracking-tight mb-6 text-center font-headline">{category}</h3>
-              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
+              <h3 className="text-2xl font-semibold tracking-tight mb-4 text-center font-headline">{category}</h3>
+              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 justify-items-center">
                 {categorySkills.map((tech) => (
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
@@ -165,3 +165,4 @@ export default function TechStack() {
     </section>
   );
 }
+
