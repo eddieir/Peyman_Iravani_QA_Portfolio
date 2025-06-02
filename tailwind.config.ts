@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Space Grotesk', 'sans-serif'],
+        lora: ['Lora', 'serif'],
         code: ['monospace'],
       },
       colors: {
