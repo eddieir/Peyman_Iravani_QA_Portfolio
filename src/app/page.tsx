@@ -14,9 +14,9 @@ export default function PortfolioPage() {
       <main className="flex-grow">
         <AboutMe />
         <TechStack />
+        <Experiences />
         <GitHubProjects />
         <MediumArticles />
-        <Experiences />
         <ContactSection />
       </main>
       <Footer />
