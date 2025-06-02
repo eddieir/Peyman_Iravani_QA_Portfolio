@@ -11,10 +11,13 @@ export default function AboutMe() {
               About Me
             </h2>
             <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I am Peyman Iravani, a dedicated QA Automation Engineer with over 5 years of experience in designing, developing, and implementing robust automation frameworks. My expertise spans across various testing methodologies and tools, ensuring high-quality software delivery. I am passionate about leveraging technology to streamline testing processes and enhance product reliability.
+              I’m Peyman Iravani, a Senior QA Automation Engineer with over five years of experience designing and implementing scalable, high-impact automation solutions. I’ve worked with leading companies like MSC Technology, Oval Money, and TIM, building robust test infrastructures and driving quality across complex systems.
             </p>
-             <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              I thrive in dynamic environments, continuously learning and adapting to new challenges in the ever-evolving tech landscape. My goal is to contribute to building exceptional digital experiences through meticulous testing and automation.
+            <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              My core expertise lies in developing modern automation frameworks using Playwright in both C# and JavaScript, alongside tools like Selenium, Appium, and Robot Framework. I bring end-to-end test coverage across APIs, web, and mobile platforms, leveraging cloud-based solutions (AWS, BrowserStack) and CI/CD pipelines (Azure DevOps, GitLab) to ensure seamless delivery cycles.
+            </p>
+            <p className="mt-4 max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              I’m passionate about quality, efficiency, and innovation—whether it's stabilizing flaky tests, boosting pipeline speed, or mentoring teams in best practices. I thrive in fast-paced, agile environments and enjoy contributing to products that demand excellence at every release.
             </p>
           </div>
           <div className="flex justify-center items-center">
