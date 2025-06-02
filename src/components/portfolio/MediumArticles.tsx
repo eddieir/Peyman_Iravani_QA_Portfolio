@@ -1,17 +1,13 @@
 
-import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpenText } from 'lucide-react';
-import { generateArticleImage } from '@/ai/flows/generate-article-image-flow';
 
 const articlesData = [
   {
     title: 'Understanding MCP Server Architecture for QA Automation',
     description: 'An in-depth look at MCP Server architecture and its implications for QA automation strategies.',
     articleUrl: 'https://medium.com/@peyman.iravani/understanding-mcp-server-architecture-for-qa-automation-a89e426de099',
-    // Replace this placeholder with your actual image's base64 data URI
-    staticImageUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=', 
   },
   {
     title: 'Playwright JavaScript Fundamentals for Professional QA Engineers',
@@ -39,27 +35,9 @@ interface Article {
   title: string;
   description: string;
   articleUrl: string;
-  staticImageUrl?: string;
-  generatedImageUrl?: string;
 }
 
-export default async function MediumArticles() {
-  const articlesWithImages = await Promise.all(
-    articlesData.map(async (article: Article) => {
-      if (article.staticImageUrl) {
-        return { ...article, generatedImageUrl: article.staticImageUrl };
-      }
-      try {
-        const { imageDataUri } = await generateArticleImage({ title: article.title });
-        return { ...article, generatedImageUrl: imageDataUri };
-      } catch (error) {
-        console.error(`Failed to generate image for article "${article.title}":`, error);
-        // Using a more specific placeholder to indicate actual image generation failed
-        return { ...article, generatedImageUrl: `https://placehold.co/200x100.png?text=AI+Gen+Error` };
-      }
-    })
-  );
-
+export default function MediumArticles() {
   return (
     <section id="articles" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -70,17 +48,8 @@ export default async function MediumArticles() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {articlesWithImages.map((article) => (
+          {articlesData.map((article: Article) => (
             <Card key={article.title} className="overflow-hidden hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl flex flex-col">
-              <div className="w-full aspect-[2/1] relative overflow-hidden">
-                <Image
-                  src={article.generatedImageUrl || `https://placehold.co/200x100.png?text=Image+Missing`}
-                  alt={article.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
               <CardHeader>
                 <CardTitle className="font-headline">{article.title}</CardTitle>
                 <CardDescription>{article.description}</CardDescription>
