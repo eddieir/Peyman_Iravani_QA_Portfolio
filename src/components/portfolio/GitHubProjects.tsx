@@ -1,30 +1,42 @@
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, GitFork, Star } from 'lucide-react';
 
 const projects = [
+  {
+    title: 'InstaConnect',
+    description: 'Automated Instagram interactions and management tool using Python and Selenium.',
+    githubUrl: 'https://github.com/eddieir/InstaConnect',
+    liveUrl: null,
+  },
+  {
+    title: 'NodeHorizon',
+    description: 'A backend project developed with Node.js, Express, and MongoDB for building scalable APIs.',
+    githubUrl: 'https://github.com/eddieir/NodeHorizon',
+    liveUrl: null,
+  },
+  {
+    title: 'Medical Analysis ML',
+    description: 'Machine learning project for medical data analysis and disease prediction using Python, Scikit-learn, and Pandas.',
+    githubUrl: 'https://github.com/eddieir/medical_analysis_machine_learning',
+    liveUrl: null,
+    forks: 8, // Placeholder - update with actual count
+    stars: 22, // Placeholder - update with actual count
+  },
+  {
+    title: 'Depression Detection (Twitter)',
+    description: 'ML model to detect depression indicators from Twitter posts using NLP techniques and Python.',
+    githubUrl: 'https://github.com/eddieir/Depression_detection_using_Twitter_post',
+    liveUrl: null,
+    forks: 5,  // Placeholder - update with actual count
+    stars: 18, // Placeholder - update with actual count
+  },
   {
     title: 'Falcon Automation Framework',
     description: 'A robust test automation framework built with Selenium, TestNG, Java, and Maven for comprehensive end-to-end testing of web applications. Features Page Object Model, data-driven testing, and detailed reporting capabilities.',
     githubUrl: 'https://github.com/eddieir/Falcon-Automation',
     liveUrl: null,
-  },
-  {
-    title: 'QA Automation Framework',
-    description: 'A comprehensive test automation framework built with Playwright and Python for E2E testing of web applications.',
-    githubUrl: 'https://github.com/eddieir',
-    liveUrl: '#',
-  },
-  {
-    title: 'API Test Suite',
-    description: 'Automated API tests using Node.js and Jest, focusing on RESTful services and ensuring data integrity.',
-    githubUrl: 'https://github.com/eddieir',
-  },
-  {
-    title: 'Performance Test Scripts',
-    description: 'Developed JMeter scripts for load and stress testing critical application components.',
-    githubUrl: 'https://github.com/eddieir',
   },
 ];
 
@@ -35,7 +47,7 @@ export default function GitHubProjects() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">GitHub Projects</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Explore some of my recent work and contributions on GitHub.
+            Explore some of my key projects and contributions on GitHub.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,7 +58,7 @@ export default function GitHubProjects() {
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow" />
-              <CardFooter className="flex justify-start gap-2">
+              <CardFooter className="flex flex-wrap justify-start items-center gap-2">
                 <Button variant="outline" asChild>
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" /> GitHub
@@ -58,6 +70,18 @@ export default function GitHubProjects() {
                       <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                     </a>
                   </Button>
+                )}
+                {project.forks !== undefined && (
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <GitFork className="mr-1 h-4 w-4" />
+                    <span>{project.forks}</span>
+                  </div>
+                )}
+                {project.stars !== undefined && (
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Star className="mr-1 h-4 w-4" />
+                    <span>{project.stars}</span>
+                  </div>
                 )}
               </CardFooter>
             </Card>
