@@ -50,70 +50,61 @@ const technologies = [
   { name: 'C', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Foundational knowledge in C programming." },
   { name: 'C++', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Familiar with C++ for system-level programming and performance-critical applications." },
 
-  // Test Automation & Frameworks
-  { name: 'Selenium', icon: <MousePointerSquareDashed className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Extensive experience with Selenium for web UI automation." },
-  { name: 'Appium', icon: <Smartphone className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Skilled in Appium for mobile application testing." },
-  { name: 'Playwright', icon: <Puzzle className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Proficient with Playwright for modern end-to-end web testing." },
-  { name: 'Robot Framework', icon: <Bot className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Robot Framework for keyword-driven test automation." },
-  { name: 'Cypress', icon: <CheckCircle className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Experience with Cypress for fast and reliable web testing." },
-  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Locust for load testing and performance analysis (also listed under Performance Testing)." },
-  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Expertise in Postman for API testing and development (also listed under Performance Testing)." },
-  { name: 'Newman', icon: <Terminal className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Using Newman to run Postman collections from the command line." },
-  { name: 'JUnit', icon: <TestTube2 className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Utilizing JUnit for unit testing in Java applications." },
-  { name: 'JMeter', icon: <Gauge className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Proficient with JMeter for performance and load testing." },
-  { name: 'MCP', icon: <Settings2 className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Experience with MCP (Multi-Channel Platform) framework." },
-  { name: 'Playwright-MCP', icon: <Combine className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Integrating Playwright with MCP for enhanced testing capabilities." },
-  { name: 'AI in Testing', icon: <Brain className="h-5 w-5" />, category: "Test Automation & Frameworks", detail: "Exploring and implementing AI solutions to enhance testing processes." },
+  // Frameworks & Libraries
+  { name: 'Selenium', icon: <MousePointerSquareDashed className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Extensive experience with Selenium for web UI automation." },
+  { name: 'Appium', icon: <Smartphone className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Skilled in Appium for mobile application testing." },
+  { name: 'Playwright', icon: <Puzzle className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Proficient with Playwright for modern end-to-end web testing." },
+  { name: 'Robot Framework', icon: <Bot className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Using Robot Framework for keyword-driven test automation." },
+  { name: 'Cypress', icon: <CheckCircle className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Experience with Cypress for fast and reliable web testing." },
+  { name: 'JUnit', icon: <TestTube2 className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Utilizing JUnit for unit testing in Java applications." },
+  { name: 'ReactJS', icon: <Component className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Developing interactive user interfaces with ReactJS." },
+  { name: 'AngularJS', icon: <Component className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Experience with AngularJS for building dynamic web applications." },
+  { name: 'HTML5', icon: <FileCode className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Expertise in HTML5 for structuring web content." },
+  { name: 'SASS', icon: <Palette className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Using SASS for advanced and maintainable CSS." },
+  { name: 'MCP', icon: <Settings2 className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Experience with MCP (Multi-Channel Platform) framework." },
+  { name: 'Playwright-MCP', icon: <Combine className="h-5 w-5" />, category: "Frameworks & Libraries", detail: "Integrating Playwright with MCP for enhanced testing capabilities." },
   
-  // DevOps & CI/CD
-  { name: 'Azure DevOps (ADO)', icon: <CloudCog className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Using Azure DevOps for CI/CD pipelines and project management." },
-  { name: 'GitLab', icon: <GitBranch className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Experience with GitLab for version control and CI/CD." },
-  { name: 'GitHub', icon: <Github className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Proficient with GitHub for version control, collaboration, and CI/CD via GitHub Actions." },
-  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services (also listed under Cloud & Virtualization)." }, 
-  { name: 'Docker', icon: <Box className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Utilizing Docker for containerization and environment consistency." },
-  { name: 'Kubernetes', icon: <Ship className="h-5 w-5" />, category: "DevOps & CI/CD", detail: "Hands-on experience with Kubernetes for orchestrating containerized applications." },
+  // Databases
+  { name: 'MongoDB', icon: <DatabaseZap className="h-5 w-5" />, category: "Databases", detail: "Experience with MongoDB for NoSQL database solutions." },
+  { name: 'Oracle', icon: <Database className="h-5 w-5" />, category: "Databases", detail: "Knowledge of Oracle databases for enterprise applications." },
+  { name: 'MS SQL Studio', icon: <ServerCog className="h-5 w-5" />, category: "Databases", detail: "Proficient with Microsoft SQL Server and Management Studio." },
 
-  // Web & Mobile Development
-  { name: 'ReactJS', icon: <Component className="h-5 w-5" />, category: "Web & Mobile Development", detail: "Developing interactive user interfaces with ReactJS." },
-  { name: 'AngularJS', icon: <Component className="h-5 w-5" />, category: "Web & Mobile Development", detail: "Experience with AngularJS for building dynamic web applications." },
-  { name: 'HTML5', icon: <FileCode className="h-5 w-5" />, category: "Web & Mobile Development", detail: "Expertise in HTML5 for structuring web content." },
-  { name: 'SASS', icon: <Palette className="h-5 w-5" />, category: "Web & Mobile Development", detail: "Using SASS for advanced and maintainable CSS." },
+  // Cloud, DevOps & CI/CD
+  { name: 'Azure DevOps (Pipelines)', icon: <CloudCog className="h-5 w-5" />, category: "Cloud, DevOps & CI/CD", detail: "Using Azure DevOps for CI/CD pipelines and project management." },
+  { name: 'GitLab (CI/CD)', icon: <GitBranch className="h-5 w-5" />, category: "Cloud, DevOps & CI/CD", detail: "Experience with GitLab for version control and CI/CD." },
+  { name: 'AWS', icon: <Cloud className="h-5 w-5" />, category: "Cloud, DevOps & CI/CD", detail: "Working with Amazon Web Services for cloud infrastructure and CI/CD services." }, 
+  { name: 'Docker', icon: <Box className="h-5 w-5" />, category: "Cloud, DevOps & CI/CD", detail: "Utilizing Docker for containerization and environment consistency." },
+  { name: 'Kubernetes', icon: <Ship className="h-5 w-5" />, category: "Cloud, DevOps & CI/CD", detail: "Hands-on experience with Kubernetes for orchestrating containerized applications." },
+
+  // Testing Tools & Platforms
+  { name: 'Postman', icon: <Send className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Expertise in Postman for API testing and development." },
+  { name: 'Newman', icon: <Terminal className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Using Newman to run Postman collections from the command line." },
+  { name: 'JMeter', icon: <Gauge className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Proficient with JMeter for performance and load testing." },
+  { name: 'Locust', icon: <CloudLightning className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Using Locust for load testing and performance analysis." },
+  { name: 'BrowserStack', icon: <Globe2 className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Using BrowserStack for cross-browser and cross-platform testing." },
+  { name: 'Jira', icon: <ListChecks className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Using Jira for agile project management and bug tracking." },
+  { name: 'Azure DevOps (Boards)', icon: <CloudCog className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Utilizing Azure DevOps Boards for work item tracking." },
+  { name: 'GitHub', icon: <Github className="h-5 w-5" />, category: "Testing Tools & Platforms", detail: "Proficient with GitHub for version control, collaboration, and project hosting." },
   
-  // Database Management
-  { name: 'MongoDB', icon: <DatabaseZap className="h-5 w-5" />, category: "Database Management", detail: "Experience with MongoDB for NoSQL database solutions." },
-  { name: 'Oracle', icon: <Database className="h-5 w-5" />, category: "Database Management", detail: "Knowledge of Oracle databases for enterprise applications." },
-  { name: 'Microsoft SQL Management Studio', icon: <ServerCog className="h-5 w-5" />, category: "Database Management", detail: "Proficient with Microsoft SQL Server and Management Studio." },
+  // Development Environments (IDEs)
+  { name: 'Visual Studio', icon: <TerminalSquare className="h-5 w-5" />, category: "Development Environments (IDEs)", detail: "Proficient with Visual Studio (2019, 2022) for .NET development." },
+  { name: 'VS Code', icon: <TerminalSquare className="h-5 w-5" />, category: "Development Environments (IDEs)", detail: "Extensive use of VS Code for various development tasks." },
+  { name: 'IntelliJ', icon: <TerminalSquare className="h-5 w-5" />, category: "Development Environments (IDEs)", detail: "Using IntelliJ IDEA for Java and other JVM language development." },
+  { name: 'Eclipse', icon: <TerminalSquare className="h-5 w-5" />, category: "Development Environments (IDEs)", detail: "Experience with Eclipse IDE for Java development." },
+  { name: 'PyCharm', icon: <TerminalSquare className="h-5 w-5" />, category: "Development Environments (IDEs)", detail: "Utilizing PyCharm for Python development." },
 
-  // Performance Testing
-  { name: 'Locust (Performance)', icon: <CloudLightning className="h-5 w-5" />, category: "Performance Testing", detail: "Expertise in performance testing using Locust." },
-  { name: 'Postman (API Load Testing)', icon: <Send className="h-5 w-5" />, category: "Performance Testing", detail: "Utilizing Postman for API load testing." },
-
-  // Cloud & Virtualization
-  { name: 'AWS (Cloud Services)', icon: <Cloud className="h-5 w-5" />, category: "Cloud & Virtualization", detail: "Working with Amazon Web Services for cloud infrastructure and services." },
-  { name: 'BrowserStack', icon: <Globe2 className="h-5 w-5" />, category: "Cloud & Virtualization", detail: "Using BrowserStack for cross-browser and cross-platform testing." },
-
-  // Bug Tracking Tools
-  { name: 'Jira', icon: <ListChecks className="h-5 w-5" />, category: "Bug Tracking Tools", detail: "Using Jira for agile project management and bug tracking." },
-  { name: 'Azure DevOps (Boards)', icon: <CloudCog className="h-5 w-5" />, category: "Bug Tracking Tools", detail: "Utilizing Azure DevOps Boards for work item tracking." },
-
-  // IDEs
-  { name: 'Visual Studio (2019, 2022)', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Proficient with Visual Studio (2019, 2022) for .NET development." },
-  { name: 'Visual Studio Code', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Extensive use of VS Code for various development tasks." },
-  { name: 'IntelliJ', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Using IntelliJ IDEA for Java and other JVM language development." },
-  { name: 'Eclipse', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Experience with Eclipse IDE for Java development." },
-  { name: 'PyCharm', icon: <TerminalSquare className="h-5 w-5" />, category: "IDEs", detail: "Utilizing PyCharm for Python development." },
+  // Specialized Skills
+  { name: 'AI in Testing', icon: <Brain className="h-5 w-5" />, category: "Specialized Skills", detail: "Exploring and implementing AI solutions to enhance testing processes." },
 ];
 
 const categories = [
   "Programming Languages",
-  "Test Automation & Frameworks",
-  "DevOps & CI/CD",
-  "Web & Mobile Development",
-  "Database Management",
-  "Performance Testing",
-  "Cloud & Virtualization",
-  "Bug Tracking Tools",
-  "IDEs"
+  "Frameworks & Libraries",
+  "Databases",
+  "Cloud, DevOps & CI/CD",
+  "Testing Tools & Platforms",
+  "Development Environments (IDEs)",
+  "Specialized Skills"
 ];
 
 export default function TechStack() {
@@ -135,19 +126,19 @@ export default function TechStack() {
 
           return (
             <div key={category} className="my-10">
-              <h3 className="text-2xl font-semibold tracking-tight mb-4 text-center font-headline">{category}</h3>
-              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 justify-items-center">
+              <h3 className="text-2xl font-semibold tracking-tight mb-6 text-center font-headline">{category}</h3>
+              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
                 {categorySkills.map((tech) => (
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Card className="flex flex-col items-center justify-center p-3 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-full w-28 h-28 md:w-32 md:h-32">
-                          <div className="mb-1.5 rounded-full bg-accent/10 p-2 text-accent">
+                        <Card className="flex flex-col items-center justify-center p-3 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl w-32 h-32 md:w-36 md:h-36">
+                          <div className="mb-2 rounded-full bg-accent/10 p-2.5 text-accent">
                             {tech.icon}
                           </div>
                           <CardHeader className="p-0 text-center">
-                            <CardTitle className="text-xs font-semibold font-headline leading-tight">
-                              {tech.name.replace(/\s\(.*\)/, '')}
+                            <CardTitle className="text-sm font-semibold font-headline leading-tight">
+                              {tech.name.replace(/\s\(.*\)/, '')} 
                             </CardTitle>
                           </CardHeader>
                         </Card>
@@ -166,4 +157,3 @@ export default function TechStack() {
     </section>
   );
 }
-
