@@ -9,7 +9,7 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "MSC technology",
     location: "Turin, Italy",
-    logoUrl: "https://placehold.co/100x40.png",
+    logoUrl: "https://media.licdn.com/dms/image/v2/C4E0BAQF85Rj8s5jygw/company-logo_100_100/company-logo_100_100/0/1630622205824/msc_mediterranean_shipping_co__s_a__logo?e=1754524800&v=beta&t=7Jx9vrVkkShiJi4drjYCd_dbfY_cLMgfIhMDXPLE74w",
     logoAlt: "MSC technology Logo",
     imageHint: "msc technology",
     responsibilities: [
