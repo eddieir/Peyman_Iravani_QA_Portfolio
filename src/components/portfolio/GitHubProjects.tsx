@@ -1,5 +1,4 @@
 
-import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
@@ -8,31 +7,23 @@ const projects = [
   {
     title: 'Falcon Automation Framework',
     description: 'A robust test automation framework built with Selenium, TestNG, Java, and Maven for comprehensive end-to-end testing of web applications. Features Page Object Model, data-driven testing, and detailed reporting capabilities.',
-    imageUrl: 'https://media.licdn.com/dms/image/v2/D4D2DAQEx8oIZ-QG_Ng/profile-treasury-image-shrink_800_800/B4DZZel8waHwAc-/0/1745343731237?e=1749394800&v=beta&t=nMpnejtojkUb9g0YhJaS2aNCmYFpgQHmncZXLO2cxEA',
-    imageHint: 'automation framework',
     githubUrl: 'https://github.com/eddieir/Falcon-Automation',
     liveUrl: null,
   },
   {
     title: 'QA Automation Framework',
     description: 'A comprehensive test automation framework built with Playwright and Python for E2E testing of web applications.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'code abstract',
     githubUrl: 'https://github.com/eddieir',
     liveUrl: '#',
   },
   {
     title: 'API Test Suite',
     description: 'Automated API tests using Node.js and Jest, focusing on RESTful services and ensuring data integrity.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'network server',
     githubUrl: 'https://github.com/eddieir',
   },
   {
     title: 'Performance Test Scripts',
     description: 'Developed JMeter scripts for load and stress testing critical application components.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'graph chart',
     githubUrl: 'https://github.com/eddieir',
   },
 ];
@@ -50,14 +41,6 @@ export default function GitHubProjects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.title} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 rounded-xl flex flex-col">
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                width={600}
-                height={400}
-                className={project.title === 'Falcon Automation Framework' ? "object-contain aspect-video w-full" : "object-cover aspect-video w-full"}
-                data-ai-hint={project.imageHint}
-              />
               <CardHeader>
                 <CardTitle className="font-headline">{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
