@@ -45,6 +45,7 @@ const technologies = [
   { name: 'Python', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in Python for scripting, automation, and backend development." },
   { name: 'C#', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Experienced in C# for developing .NET applications and automation solutions." },
   { name: 'Node.js', icon: <Binary className="h-5 w-5" />, category: "Programming Languages", detail: "Skilled in Node.js for building scalable backend services and APIs." },
+  { name: 'TypeScript', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Proficient in TypeScript for building robust and scalable web applications, enhancing JavaScript with static typing." },
   { name: 'SQL', icon: <Database className="h-5 w-5" />, category: "Programming Languages", detail: "Strong understanding of SQL for database querying and management." },
   { name: 'C', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Foundational knowledge in C programming." },
   { name: 'C++', icon: <Code className="h-5 w-5" />, category: "Programming Languages", detail: "Familiar with C++ for system-level programming and performance-critical applications." },
