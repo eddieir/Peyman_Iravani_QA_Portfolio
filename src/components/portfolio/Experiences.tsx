@@ -77,9 +77,9 @@ const experiencesData = [
     role: "Software engineer & QA engineer",
     company: "Wind3",
     location: "Milan, Italy",
-    logoUrl: "https://placehold.co/100x40.png",
+    logoUrl: "https://www.windtre.it/content/experience-fragments/windtre/it/it/site/header/master/_jcr_content/root/header/aem-footer-fixed-icon__desktop.coreimg.svg/1698759224713/big.svg",
     logoAlt: "Wind3 Logo",
-    imageHint: "wind3",
+    imageHint: "wind3 logo",
     responsibilities: [
       "Developed and maintained eCommerce websites using AngularJS, HTML5, and SASS, ensuring responsive and user-friendly designs.",
       "Designed and implemented test automation frameworks for web, Android, and iOS platforms using Python, Selenium, and Appium.",
