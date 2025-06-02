@@ -28,7 +28,7 @@ const experiencesData = [
     role: "QA Automation Engineer",
     company: "Oval Money",
     location: "Turin, Italy",
-    logoUrl: "https://placehold.co/100x40.png",
+    logoUrl: "https://media.licdn.com/dms/image/v2/C560BAQFQOr6FZ1LkoQ/company-logo_100_100/company-logo_100_100/0/1630615176786/ovalmoney_logo?e=1754524800&v=beta&t=cVBn0W99qEHtpHvygwwLgUikw9ycb3UraprkTZwlpWk",
     logoAlt: "Oval Money Logo",
     imageHint: "oval money",
     responsibilities: [
