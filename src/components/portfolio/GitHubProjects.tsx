@@ -21,22 +21,30 @@ const projects = [
     description: 'Machine learning project for medical data analysis and disease prediction using Python, Scikit-learn, and Pandas.',
     githubUrl: 'https://github.com/eddieir/medical_analysis_machine_learning',
     liveUrl: null,
-    forks: 8, // Placeholder - update with actual count
-    stars: 22, // Placeholder - update with actual count
+    forks: 8,
+    stars: 22,
   },
   {
     title: 'Depression Detection (Twitter)',
     description: 'ML model to detect depression indicators from Twitter posts using NLP techniques and Python.',
     githubUrl: 'https://github.com/eddieir/Depression_detection_using_Twitter_post',
     liveUrl: null,
-    forks: 5,  // Placeholder - update with actual count
-    stars: 18, // Placeholder - update with actual count
+    forks: 5,
+    stars: 18,
   },
   {
     title: 'Falcon Automation Framework',
     description: 'A robust test automation framework built with Selenium, TestNG, Java, and Maven for comprehensive end-to-end testing of web applications. Features Page Object Model, data-driven testing, and detailed reporting capabilities.',
     githubUrl: 'https://github.com/eddieir/Falcon-Automation',
     liveUrl: null,
+  },
+  {
+    title: 'Hayola',
+    description: 'A social media platform project developed with modern web technologies.',
+    githubUrl: 'https://github.com/eddieir/Hayola',
+    liveUrl: null,
+    forks: 2, // Placeholder - update with actual count
+    stars: 10, // Placeholder - update with actual count
   },
 ];
 
