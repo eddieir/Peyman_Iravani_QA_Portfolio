@@ -135,17 +135,19 @@ export default function TechStack() {
           return (
             <div key={category} className="my-10">
               <h3 className="text-2xl font-semibold tracking-tight mb-6 text-center font-headline">{category}</h3>
-              <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              <div className="mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 justify-items-center">
                 {categorySkills.map((tech) => (
                   <TooltipProvider key={tech.name}>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Card className="flex flex-col items-center justify-center p-4 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-xl">
-                          <div className="mb-2 rounded-full bg-accent/10 p-2.5 text-accent">
+                        <Card className="flex flex-col items-center justify-center p-3 hover:border-accent/50 hover:bg-secondary/60 transition-all duration-300 rounded-full w-28 h-28 md:w-32 md:h-32">
+                          <div className="mb-1.5 rounded-full bg-accent/10 p-2 text-accent">
                             {tech.icon}
                           </div>
                           <CardHeader className="p-0 text-center">
-                            <CardTitle className="text-sm font-semibold font-headline">{tech.name.replace(/\s\(.*\)/, '')}</CardTitle>
+                            <CardTitle className="text-xs font-semibold font-headline leading-tight">
+                              {tech.name.replace(/\s\(.*\)/, '')}
+                            </CardTitle>
                           </CardHeader>
                         </Card>
                       </TooltipTrigger>
