@@ -29,6 +29,11 @@ const articlesData = [
     description: 'Leveraging MCP Server logic to create robust and intelligent test selectors for automation.',
     articleUrl: 'https://medium.com/@peyman.iravani/building-intelligent-test-selectors-with-mcp-server-logic-d5fb8c26730e',
   },
+  {
+    title: 'Advanced Playwright Patterns: Parallel Testing and Resource Management',
+    description: 'Maximising test execution efficiency in enterprise environments',
+    articleUrl: 'https://medium.com/@peyman.iravani/advanced-playwright-patterns-parallel-testing-and-resource-management-3e4e71e09801',
+  },
 ];
 
 interface Article {
