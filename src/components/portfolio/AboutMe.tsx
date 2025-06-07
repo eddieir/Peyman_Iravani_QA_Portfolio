@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 
 export default function AboutMe() {
@@ -21,9 +20,9 @@ export default function AboutMe() {
             </p>
           </div>
           <div className="flex justify-center items-center">
-            <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-xl">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-xl">
               <Image
-                src="https://avatars.githubusercontent.com/u/23243761?v=4"
+                src="/img/23243761.gif"
                 alt="Peyman Iravani"
                 width={256}
                 height={256}
