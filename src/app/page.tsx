@@ -7,7 +7,8 @@ import Experiences from '@/components/portfolio/Experiences';
 import ContactSection from '@/components/portfolio/ContactSection';
 import Footer from '@/components/portfolio/Footer';
 
-export default function PortfolioPage() {
+export default function Home() {
+  console.log("Home component is rendering");
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -20,6 +21,9 @@ export default function PortfolioPage() {
         <ContactSection />
       </main>
       <Footer />
+      <div>
+        <p>If you see this message, the components above might not be rendering correctly.</p>
+      </div>
     </div>
   );
 }
