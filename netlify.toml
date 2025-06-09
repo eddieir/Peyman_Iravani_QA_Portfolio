@@ -2,5 +2,11 @@
   command = "npm run build"
   publish = ".next"
 
-[[plugins]]
-  package = "@netlify/next-runtime"
+[dev]
+  framework = "next"
+
+[functions]
+  directory = "functions"
+
+[functions.environment]
+  NODE_VERSION = "22"
