@@ -7,6 +7,3 @@
 
 [functions]
   directory = "functions"
-
-[functions.environment]
-  NODE_VERSION = "22"
