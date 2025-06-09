@@ -21,9 +21,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-      <div>
-        <p>If you see this message, the components above might not be rendering correctly.</p>
-      </div>
+      
     </div>
   );
 }
