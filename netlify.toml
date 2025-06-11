@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[dev]
+  framework = "next"
+
+[functions]
+  directory = "functions"

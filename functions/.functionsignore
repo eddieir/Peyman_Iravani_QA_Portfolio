@@ -1,0 +1,10 @@
+.eslintrc
+*.json
+*.ts
+*.js
+*.config.*
+*.lock
+node_modules/
+package.json
+package-lock.json
+tsconfig.json
