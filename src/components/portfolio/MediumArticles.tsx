@@ -38,6 +38,11 @@ const articlesData = [
     title: 'API Testing Integration: Combining REST APIs with UI Automation',
     description: 'Building comprehensive test suites that validate end-to-end workflows',
     articleUrl: 'https://medium.com/@peyman.iravani/api-testing-integration-combining-rest-apis-with-ui-automation-a0372b6704ce',
+  },
+  {
+    title: 'Custom Reporting and Analytics with MCP Server',
+    description: 'Building intelligent test reporting systems that provide actionable insights',
+    articleUrl: 'https://medium.com/@peyman.iravani/custom-reporting-and-analytics-with-mcp-server-683de5bec472',
   }
 ];
 
