@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpenText } from 'lucide-react';
+import { title } from 'process';
 
 const articlesData = [
   {
@@ -43,7 +44,38 @@ const articlesData = [
     title: 'Custom Reporting and Analytics with MCP Server',
     description: 'Building intelligent test reporting systems that provide actionable insights',
     articleUrl: 'https://medium.com/@peyman.iravani/custom-reporting-and-analytics-with-mcp-server-683de5bec472',
+  },
+  {
+    title: 'Advanced JavaScript Testing Strategies for Modern Web Applications',
+    description: 'Master Authentication Flows, Visual Testing, and Performance Optimization with Playwright',
+    articleUrl: 'https://medium.com/@peyman.iravani/advanced-javascript-testing-strategies-for-modern-web-applications-00ce3a09cb8b',
+  },
+  {
+    title:'Security Testing Automation: Integrating Security Scans with Functional Tests',
+    description: 'Security Testing Automation: Integrating Security Scans with Functional Tests',
+    articleUrl: 'https://medium.com/@peyman.iravani/security-testing-automation-integrating-security-scans-with-functional-tests-faee52ed72af'
+  },
+  {
+    title:'Scaling Test Automation: From Dozens to Thousands of Tests',
+    description: 'Enterprise-level strategies for massive test suite management',
+    articleUrl: 'https://medium.com/@peyman.iravani/scaling-test-automation-from-dozens-to-thousands-of-tests-3e715da8f13d'
+  },
+  {
+    title: 'Cloud Testing Strategies: AWS, Azure, and GCP Integration',
+    description: 'Leveraging cloud platforms for scalable test automation',
+    articleUrl: 'https://medium.com/@peyman.iravani/cloud-testing-strategies-aws-azure-and-gcp-integration-f574e035652c'
+  },
+  {
+    title: 'AI-Powered Test Generation and Maintenance',
+    description: 'Leveraging artificial intelligence to create and maintain test suites',
+    articleUrl: 'https://medium.com/@peyman.iravani/ai-powered-test-generation-and-maintenance-c903c56a940a'
+  },
+  {
+    title: 'QA Automation in Blockchain: Mastering Liquid Network Testing with Modern Solutions',
+    description: 'How to overcome common testing challenges in the Liquid Network ecosystem using cutting-edge automation strategies',
+    articleUrl: 'https://medium.com/@peyman.iravani/qa-automation-in-blockchain-mastering-liquid-network-testing-with-modern-solutions-99516105dd20'
   }
+
 ];
 
 interface Article {
